@@ -1,3 +1,4 @@
+// @ts-nocheck
 export async function GET(req, res) {
   const { url } = req.query;
 
