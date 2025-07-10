@@ -19,6 +19,6 @@ export default async function handler(req, res) {
 
     return res.status(200).send(Buffer.from(buffer));
   } catch (error) {
-    return res.status(500).send("Image fetch failed");
+    return res.status(500).send("Image fetch failed", error);
   }
 }
