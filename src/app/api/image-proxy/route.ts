@@ -1,5 +1,5 @@
-// @ts-nocheck
-export async function GET(req, res) {
+
+export async function GET(req:any, res:any) {
   const { url } = req.query;
 
   if (!url) {
@@ -8,7 +8,7 @@ export async function GET(req, res) {
 
   try {
     const response = await fetch(decodeURIComponent(url));
-    const contentType = response.headers.get("content-type");
+    const contentType = response.headers.get("content-type") as any;
 
     if (!response.ok || !contentType.startsWith("image")) {
       return res.status(400).send("Invalid image URL");
