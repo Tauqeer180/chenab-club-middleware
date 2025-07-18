@@ -1,4 +1,3 @@
-
 // @ts-nocheck
 // src/app/api/proxy/[...path]/route.ts
 
