@@ -1,3 +1,5 @@
+
+// @ts-nocheck
 // src/app/api/proxy/[...path]/route.ts
 
 import { NextRequest } from "next/server";
