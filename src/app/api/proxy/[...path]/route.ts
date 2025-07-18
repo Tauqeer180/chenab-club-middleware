@@ -31,7 +31,7 @@ async function handleRequest(req: NextRequest, method: string) {
       resHeaders[key] = value;
     });
 
-    const responseBody = await response.text();
+    const responseBody = await response.arrayBuffer();
 
     return new Response(responseBody, {
       status: response.status,
