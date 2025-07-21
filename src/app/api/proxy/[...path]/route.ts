@@ -3,7 +3,7 @@
 
 import { NextRequest } from "next/server";
 
-const ODOO_BASE_URL = "http://203.99.53.212:8069";
+const ODOO_BASE_URL = "http://203.99.53.210:8069";
 
 async function handleRequest(req: NextRequest, method: string) {
   const { pathname, search } = new URL(req.url);
@@ -14,7 +14,7 @@ async function handleRequest(req: NextRequest, method: string) {
   const targetUrl = `${ODOO_BASE_URL}${proxyPath}${search}`;
 
   const headers = new Headers(req.headers);
-  headers.set("host", "http://203.99.53.212:8069"); // optional
+  headers.set("host", "http://203.99.53.210:8069"); // optional
 
   const body =
     method !== "GET" && method !== "HEAD" ? await req.text() : undefined;
